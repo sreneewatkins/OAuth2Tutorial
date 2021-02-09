@@ -20,8 +20,27 @@
 </head>
 
 <body>
-    <h1>Demo</h1>
-    <div class="container"></div>
+    <h1>Demo's Home Page</h1>
+    <h2>Social Login </h2>
+
+    <div class="container unauthenticated">
+        With GitHub: <a href="/oauth2/authorization/github">click here</a>
+    </div>
+
+    <div class="container authenticated" style="display:none">
+        Logged in as: <span id="user"></span>
+    </div>
 </body>
+
+<!--the following JavaScript, which will hit that user endpoint. Based on the endpoint’s
+response, this JavaScript will populate the <span> tag with the user’s name and toggle
+the <div> appropriately-->
+<script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+</script>
 
 </html>
