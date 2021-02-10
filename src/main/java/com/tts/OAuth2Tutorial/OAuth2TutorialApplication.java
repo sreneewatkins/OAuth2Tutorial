@@ -1,5 +1,7 @@
 package com.tts.OAuth2Tutorial;
 
+//https://spring.io/guides/tutorials/spring-boot-oauth2/
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
