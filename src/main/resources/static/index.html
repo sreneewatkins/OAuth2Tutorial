@@ -37,6 +37,8 @@
             <button onClick="logout()" class="btn btn-primary">Logout</button>
         </div>
     </div>
+
+    <div class="container text-danger error"></div>
 </body>
 
 <!--the following JavaScript, which will hit that user endpoint. Based on the endpoint’s
@@ -70,6 +72,14 @@ the <div> appropriately-->
           }
         }
       }
+    });
+
+    $.get("/error", function(data) {
+        if (data) {
+            $(".error").html(data);
+        } else {
+            $(".error").html('');
+        }
     });
 </script>
 
