@@ -6,4 +6,12 @@ spring:
           github:
             clientId: 9cbdb477cd573a35a112
             clientSecret: 511c79a3c33ca0fd3167b575532063f527f68914
+          google:
+            client-id: 703332845099-i5f2s8c89sbh10atv1piuv80umf220am.apps.googleusercontent.com
+            client-secret: dBNnEyr10fQxkU6R7Gpg9kDa
 # ...
+
+
+#GoogleProjectID
+#  oauth2tutorial-304321
+
